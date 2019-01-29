@@ -10,11 +10,10 @@ class App extends Component {
   }
 	render() {
 		return (
-			<div className="App">
-				<button onClick={this.handleOnClick}>Click</button>
-				<p>{this.props.items.length}</p>
-			</div>
-		);
+      <button onClick={(event) => this.handleOnClick(event)} >
+                Click
+      </button>
+              <p>{this.props.store.getState().items.length}</p>      </div>
 	}
 }
 
